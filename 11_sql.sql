@@ -39,9 +39,9 @@ from students , student_hody where students.id = student_hody.id;
 select students.id ,sname, hody 
 from students inner join student_hody on(students.id = student_hody.id);
 
--- equivalent join   inner join  hi h ab name change car dia h naya update me
+-- equivalent join   inner join  hi h  ab name change car dia h naya update me
 
--- left join
+-- left   join
 select students.id ,sname, hody 
 from students left join student_hody on(students.id = student_hody.id);
 
@@ -58,7 +58,7 @@ from students full join student_hody on(students.id = student_hody.id);    -- er
 -- join with alias 
 select s.id ,sname, hody 
 from students as s join student_hody  as h on(s.id = h.id);
-
+-- we have to give an alias name also  to a quary  when we use it as a sub wuary
 select  actor.actor_id ,first_name ,last_name ,film_id,title,release_year 
 from 
 actor inner join film_actor using (actor_id)
