@@ -1,3 +1,4 @@
+
 use sakila;
 show tables; 
 desc actor;
@@ -55,7 +56,7 @@ from students full join student_hody on(students.id = student_hody.id);    -- er
 
 -- natural join inner join ki tatrah kam karega agar common column h
 -- natural join  cross profuct ki tarah kam karega agar common column nahi h
--- join with alias 
+-- join With alias 
 select s.id ,sname, hody 
 from students as s join student_hody  as h on(s.id = h.id);
 -- we have to give an alias name also  to a quary  when we use it as a sub wuary
