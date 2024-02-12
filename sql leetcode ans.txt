@@ -1,0 +1,38 @@
+date 12 feb 2024
+
+leet code question answer of sql 
+given question 607 , 610 , 619 , 627
+
+question 607  => salesperson
+
+select  name from salesperson  where name not in (
+select sp.name from 
+salesperson  sp join orders od on (sp.sales_id  = od.sales_id) 
+ join company cm  on (od.com_id = cm.com_id)
+ where cm.name = "Red"
+);
+
+
+question 610 => Triangle Judgement
+
+select x,y,z, 
+case when x+y>z and y+z>x and z+x>y then "Yes" else "No" end as triangle
+from Triangle ;
+
+question 619 => Biggest simple Number 
+
+select ifnull(num,"null")  num  from mynumbers
+ group by num having count(*) = 1 order by num desc
+ limit 1 ;
+
+question 627 => Swap Salary 
+
+update salary set sex = 
+( 
+    case sex
+    when "m" then "f"
+    when "f" then "m"
+    end 
+);
+
+
